@@ -1,0 +1,933 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+//Change the body background color to #fff
+body{
+  background: #FFFFFF;
+  font-family: 'Poppins', Sans-Serif;
+}
+
+/*---------------------------Navbar Image------------------------*/
+//Remove display fluid from bootstrap, add block and center the img of JamBook
+#navbar-top{
+  display: block;
+  text-align: center;
+}
+
+//3 LINES NOT APEAR BLACK SQUARE
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")!important;
+} 
+
+//Set the parameters for image of JamBook
+.navbar-brand img{
+  width: 400px;
+  height: 100px;
+  margin: 70px 0 30px 0;
+}
+
+a.nav-link--::before{
+  display: inline !important;
+}
+
+/*---------------------------Navbar Header------------------------*/
+
+//Add a bottom to navbar-items
+.header .navbar-expand-lg{
+  margin:0 40px 20px 40px;
+}
+
+
+//Remove decoration to nav Home
+.navbar-nav .nav-item{
+  text-decoration: none;
+}
+
+//Decoration to nav Home
+.navbar-nav .nav-item a{
+  font-family: 'Poppins', Sans-Serif;
+  font-weight: 500;
+  color: #000;
+  font-size: 20px;
+  transition: .3s all;
+  border: none;
+}
+
+//Create the line below Home
+.navbar-nav .nav-item .nav-link::after{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+//Add the line in Home
+.navbar-nav .nav-item .nav-link:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
+//Border and design of box for my account and log out
+.region-header-form .nav .nav-link{
+  border: 1px solid #137C6D;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Poppins', Sans-Serif;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: .8s;
+  position: relative;
+  overflow: hidden;
+}
+
+//Parameters for the nav link user my account
+.region-header-form .nav .nav-link--user,
+.region-header-form .nav .nav-link--user-login{
+  color: #fff;
+}
+
+//When hover nav link my account
+.region-header-form .nav .nav-link--user:hover,
+.region-header-form .nav .nav-link--user-login:hover{
+  color: #137C6D;
+}
+
+
+//Parameters for the nav link logout
+.region-header-form .nav .nav-link--user-logout{
+  color: #137C6D;
+}
+
+//When hover nav link logout
+.region-header-form .nav .nav-link--user-logout:hover{
+  color: #fff;
+}
+
+//Create the box for both nav links
+.region-header-form .nav .nav-link::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #137C6D;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+//Start parameters for the animation of logout
+.region-header-form .nav .nav-link--user-logout::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+//Start parameters for the animation of my account
+.region-header-form .nav .nav-link--user::before,
+.region-header-form .nav .nav-link--user-login::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+//Start parameters for the animation of my account
+.region-header-form .nav .nav-link--user::before,
+.region-header-form .nav .nav-link--user-login::before{
+  height: 180%;
+}
+
+//End parameters for the animation of logout
+.region-header-form .nav .nav-link--user-logout:hover::before{
+  height: 180%;
+}
+
+//End parameters for the animation of my account
+.region-header-form .nav .nav-link--user:hover::before,
+.region-header-form .nav .nav-link--user-login:hover::before{
+  height: 0%;
+}
+
+/*---------------------------highlighted------------------------*/
+
+//Create the separator between navbar and content
+.highlighted{
+  padding: 20px 0;
+  background: #91DBD0;
+  margin-bottom: 60px;
+}
+
+/*---------------------------Sidebar Lastest Posts------------------------*/
+//Change color of the box of Lastest Posts
+.container .sidebar_second .views-element-container{
+  border-color: #91DBD0;
+}
+
+//Center title and give design to it
+.container .sidebar_second .block-views-blocklastest-posts-block-1 h2{
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Poppins', Sans-Serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+//Center Reseñas content in the box
+.container .sidebar_second .block-views-blocklastest-posts-block-1 .content .view-content{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px 4px 20px;
+}
+
+//Design fot the a of the content
+.container .sidebar_second .block-views-blocklastest-posts-block-1 .content .view-content .views-field a{
+  color: #000;
+  text-decoration: none;
+  line-height: 27px;
+}
+
+//Hover for the a in content
+.container .sidebar_second .block-views-blocklastest-posts-block-1 .content .view-content .views-field a:hover{
+  color: #197264;
+}
+
+/*---------------------------Sidebar Categories------------------------*/
+//Remove box from Categories
+.container .sidebar_second .menu--categories{
+  border: none;
+}
+
+//Design to h2 Categories Title
+.container .sidebar_second .menu--categories h2{
+  padding-top: 20px;
+  font-size: 38px;
+}
+
+//Properties for the ul of Categories
+.container .sidebar_second .menu--categories ul{
+  display: grid;
+  list-style-type: none;
+  margin: 4px 1px;
+}
+
+//Design for a of ul
+.container .sidebar_second .menu--categories ul a{
+  color: #000;
+}
+
+//Design for a of a while hover
+.container .sidebar_second .menu--categories ul a:hover{
+  color: #197264;
+}
+
+//Design for li
+.container .sidebar_second .menu--categories ul li{
+  border-bottom: 1px solid #91DBD0;
+  width: 80%;
+  margin-left: 20px;
+}
+
+//Design for li of menu inside normal li
+.container .sidebar_second .menu--categories ul li .menu li{
+  border-bottom: none;
+  text-decoration: none;
+  align-items: center;
+  margin-left: -15px;
+}
+
+/*---------------------------Main Content------------------------*/
+//Change color of the line between contents
+.node--view-mode-teaser{
+  border-bottom: 1px solid #91DBD0;
+}
+
+//Make the col of content a little shorter for separating from sidebar
+.container .col{
+  margin-right: 40px;
+}
+
+//Change design fot the titles of the contents
+.main-content .content .view-content .views-row header .node__title a{
+  font-weight: 500;
+  text-decoration: none;
+  transition: .2s;
+}
+
+//Hover of the titles content
+.main-content .content .view-content .views-row header .node__title a:hover{
+  color: #197264;
+
+}
+
+//Margin for separating who submitted and content
+.main-content .content .view-content .views-row header .node__meta{
+  margin-bottom: 20px;
+}
+
+//Modify Images of content and add shadow
+.main-content .content .view-content .views-row .node__content img{
+  width: 187px;
+  height: 273px;
+  margin-right: 15px;
+  box-shadow: 6px 7px 12px rgba(0, 0, 0, 0.4);
+  transition: .3s;
+}
+
+.main-content .content .view-content .views-row .node__content img:hover{
+  transform: scale(1.1);
+}
+//For changing size and design of the p of the image
+.main-content .content .view-content .views-row .node__content p{
+  font-size: 18px;
+  text-align: justify;
+  margin-right: 20px;
+}
+
+//Remove comment add for log user from inline__links
+.main-content .content .view-content .views-row .node__content .inline__links .links .comment-add,
+.main-content .content .view-content .views-row .node__content .inline__links .links .comment-forbidden,
+.main-content .content .view-content .views-row .node__content .inline__links .links .comment-comments{
+  display: none;
+}
+
+//Remove comment add for log user from inline__links
+.main-content .content .view-content .views-row .node__content .inline__links .links .comment-new-comments{
+  display: none!important;
+}
+
+//Start design for node-readmore "button"
+.main-content .content .view-content .views-row .node__content .inline__links .links .node-readmore a{
+  color: #fff;
+  text-decoration: none;
+}
+
+//Design button readmore
+.main-content .content .view-content .views-row .node__content .inline__links .links .node-readmore{
+  position: relative;
+  background: #137C6D;
+  border-radius: 6px;
+  color: #000;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  font-size: 20px !important;
+  font-weight: 400;
+  box-shadow: 0 0 9px 0px rgba(0,0,0,.2);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  transition: .5s;
+}
+
+//Button hover
+.main-content .content .view-content .views-row .node__content .inline__links .links .node-readmore:hover{
+  background: #1dad98;
+}
+
+//Set pagination tu center of content
+.pagination{
+  justify-content: center;
+}
+
+//Design pagination
+.page-link{
+  border: 1px solid #137C6D;
+  color: #137C6D;
+}
+//Design pagination
+.page-link:hover{
+  background-color: #91DBD0;
+  color: #137C6D;
+}
+//Design pagination
+.page-item.active .page-link{
+  background-color: #137C6D;
+  border-color: #137C6D;
+}
+
+/*---------------------------Sidebar Recent Category Posts------------------------*/
+
+//Center title and give design to it
+.container .sidebar_second .block-views-blockrecent-post-block-1 h2{
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Poppins', Sans-Serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+//Center Reseñas content in the box
+.container .sidebar_second .block-views-blockrecent-post-block-1 .content .view-content{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px 4px 20px;
+}
+
+//Design fot the a of the content
+.container .sidebar_second .block-views-blockrecent-post-block-1 .content .view-content .views-field a{
+  color: #000;
+  text-decoration: none;
+  line-height: 27px;
+}
+
+//Hover for the a in content
+.container .sidebar_second .block-views-blockrecent-post-block-1 .content .view-content .views-field a:hover{
+  color: #197264;
+}
+
+/*---------------------------Breadcrumb------------------------*/
+//Design Breadcrumb
+.breadcrumb {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+
+}
+//Design Breadcrumb
+.breadcrumb a{
+  color: #000 !important;
+  transition: .3s;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+//Design Breadcrumb
+.breadcrumb a:hover{
+  color: #197264 !important;
+}
+
+/*---------------------------Title of categories and items------------------------*/
+//Design for categories titles
+.main-content .section .block-page-title-block .content h1{
+  margin-left: -22px;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 30px;
+  padding: 7px 20px;
+  text-transform: uppercase;
+}
+
+/*---------------------------Footer------------------------*/
+//Change font
+.site-footer {
+  font-family: 'Poppind', Helvetica, Arial, sans-serif;
+  padding: 35px 0 30px;
+  background: #91DBD0;
+  margin-top: 40px;
+}
+//Change font color
+.site-footer .content {
+  color: #000 !important;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.857em;
+}
+//Edit the color of the pagename
+.site-footer .content a, .site-footer .content a.is-active {
+  color: #000 !important;
+}
+/*---------------------------Login------------------------*/
+//Limit the title width in the section login
+.main-content .section .block-page-title-block .content .title{
+  max-width: 40rem!important;
+}
+//Limit the width in the section username
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .user-login-form{
+  max-width: 40rem!important;
+}
+//Change the border color
+.tabs .nav-tabs{
+  border-bottom: 1px solid #91DBD0;
+}
+//Change the color for the links and the color with the hover
+.tabs .nav-tabs .nav-item .nav-link{
+  color: #000!important;
+  &:hover{
+    color: #137C6D!important;
+    border-color: #91DBD0 #91DBD0;
+    border-width: 0.1em;
+  }
+}
+//Change the color for the active link
+.tabs .nav-tabs .nav-item .active{
+  color:#137C6D!important;
+  border-color: #137C6D #137C6D #fff;
+  border-width: 0.1em;
+  &:hover{
+    color: unset!important;
+    border-color: #137C6D #137C6D #fff;
+  }
+}
+//Edit the style for the buttons
+.content .user-login-form .form-group .btn-primary {
+  position: relative;
+  background: #137C6D;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  font-size: 16px !important;
+  font-weight: 400;
+  box-shadow: 0 0 9px 0px rgba(0,0,0,.2);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  transition: .5s;
+  border-radius: 0px;
+  padding: 1% 5% 1% 5%;
+  font-size: x-large;
+}
+//Change the color with the hover for the buttons
+.content .user-login-form .form-group .btn-primary:hover{
+  background: #1dad98;
+}
+
+/*---------------------------Register------------------------*/
+//Limit the title width in the section register
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .user-register-form{
+  max-width: 40rem!important;
+}
+//Limit the with in the section pass
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .user-register-form .js-form-wrapper .js-form-item .form-item-pass-pass1{
+  max-width: 40rem!important;
+}
+//Limit the with in the section confirm pass
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .user-register-form .js-form-wrapper .js-form-item .form-item-pass-pass2{
+  max-width: 40rem!important;
+}
+//Style for the buttons
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .user-register-form .js-form-wrapper .btn-primary{
+  position: relative;
+  background: #137C6D;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  font-size: 16px !important;
+  font-weight: 400;
+  box-shadow: 0 0 9px 0px rgba(0,0,0,.2);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  transition: .5s;
+  border-radius: 0px;
+  padding: 1% 5% 1% 5%;
+  font-size: x-large;
+}
+//Style hover buttons
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .user-register-form .js-form-wrapper .btn-primary:hover{
+  background: #1dad98;
+}
+/*---------------------------New Password------------------------*/
+
+//Limit the with for the secction new pass
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .user-pass{
+  max-width: 40rem!important;
+}
+//Style for the buttons
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .user-pass .form-actions .btn-primary{
+  position: relative;
+  background: #137C6D;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  font-size: 16px !important;
+  font-weight: 400;
+  box-shadow: 0 0 9px 0px rgba(0,0,0,.2);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  transition: .5s;
+  border-radius: 0px;
+  padding: 1% 5% 1% 5%;
+  font-size: x-large;
+}
+/*---------------------------Main Account------------------------*/
+
+//Disable the label in the profile for creation date
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .profile .js-form-type-item{
+  display: none;
+}
+//Disable the label bio
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .profile .field--name-field-bio .field__label{
+  display: none;
+}
+//Edit the shape and size of the profile img
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .profile .field--name-user-picture .image-style-medium{
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  margin-right: 15px;
+}
+//Give the align for the img and the bio
+.container .row-offcanvas-left .main-content .section .block-system-main-block .content .profile{
+  display: flex;
+  align-items: center;
+}
+//Space for content
+.container .row-offcanvas-left .main-content .section .block-views-blockresenas-creadas-block-1 {
+  padding-top: 30px;
+}
+/*---------------------------Book Post------------------------*/
+//Justify the description text
+.field--name-field-descripcion{
+  text-align: justify;
+}
+//Disable the title
+.content .contextual-region .node__content .field--type-comment .comment .comment__content .card-body .card-title{
+  display: none;
+}
+//Disable the card title
+.comment .comment__content .card-body .card-title{
+  display: none;
+}
+//Disable label comments
+.comment .comment__content .card-body .field .field__label{
+  display: none;
+}
+//Disable the label value in the comments
+.content .contextual-region .node__content .field--name-field-comentarios .contextual-region .comment__content .card-body .field--name-field-comment-bar .field__label{
+  display: none;
+}
+//Change the color text for the links
+.content .contextual-region .node__content .field .comment-form .field--type-text-long .js-text-format-wrapper .js-form-type-textarea .form-required{
+  display: none;
+}
+//Change the color text with hover for the links
+.node__content .inline__links .links .comment-add{
+  background: #197264;
+}
+//Disable the hypertext style for the links
+.node__content .inline__links .links .comment-add:hover{
+  background: #1dad98;
+}
+//Space for the contents
+.node__content .inline__links .links .comment-add a{
+  color: #fff!important;
+  text-decoration:none;
+}
+//Space for the contents
+.node__content .inline__links {
+  margin-bottom: 15px;
+}
+//Change the color for the links
+.comment__content .card-body nav .inline__links{
+  color: #197264;
+}
+//Adjust space span
+.comment .comment__content .card-body nav .inline__links .links-inline{
+  justify-content: end;
+}
+//Extend the width of the comments
+.comment .comment__content{
+  max-width: 100%;
+}
+//Make the span looks like a button
+.card-body nav .inline__links .links-inline span a{
+  color: #fff!important;
+  text-decoration:none;
+  background-color: #6e6c6c;
+  padding: 5px 7px 5px 7px;
+}
+//Change the color with the hover for the buttons
+.card-body nav .inline__links .links-inline span a:hover{
+  color: #20c997!important;
+}
+//Give a shape and color to the span
+.card-body nav .inline__links .links-inline span{
+  padding: 5px 7px 5px 7px;
+  color: rgb(46, 43, 43);
+}
+//Disable the padding
+.comment .links-inline span {
+  padding: none;
+}
+//Style for the buttons
+.comment-form .form-actions .button--primary{
+  position: relative;
+  background: #137C6D;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  font-size: 16px !important;
+  font-weight: 400;
+  box-shadow: 0 0 9px 0px rgba(0,0,0,.2);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  transition: .5s;
+  border-radius: 0px;
+  padding: 1% 5% 1% 5%;
+}
+//Style for the buttons with hover
+.comment-form .form-actions .button--primary:hover{
+  background: #1dad98;
+}
+//Change the text color for the hyperlinks
+.text-format-wrapper .form-group a{
+  color: #197264;
+}
+//Change the text color for the hyperlinks
+.text-format-wrapper .form-group a:hover{
+  color: #1dad98;
+  text-decoration: none;
+}
+//Style for the hyperlinks with the hover
+.comment-form .form-submit::before{
+  display: none;
+}
+//Disable the hyperlink in the comments section
+.card-body .comment__permalink a{
+  display: none;
+}
+
+
+/*---------------------------Sidebar Lastest Posts------------------------*/
+//Change color of the box of Lastest Posts
+.container .sidebar_second .views-element-container{
+  border-color: #91DBD0;
+}
+
+//Center title and give design to it
+.container .sidebar_second .block-views-blocklastest-posts-block-1 h2{
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Poppins', Sans-Serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+//Center Reseñas content in the box
+.container .sidebar_second .block-views-blocklastest-posts-block-1 .content .view-content{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px 4px 20px;
+}
+
+//Design fot the a of the content
+.container .sidebar_second .block-views-blocklastest-posts-block-1 .content .view-content .views-field a{
+  color: #000;
+  text-decoration: none;
+  line-height: 27px;
+}
+
+//Hover for the a in content
+.container .sidebar_second .block-views-blocklastest-posts-block-1 .content .view-content .views-field a:hover{
+  color: #197264;
+}
+
+/*---------------------------Sidebar Related Post------------------------*/
+//Edit and align the content for the slidebar
+.content div .view-post-relacionados .view-content{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px 4px 20px;
+}
+//Space for the contents
+.view-post-relacionados .view-content .views-row{
+  margin-bottom: 10px;
+}
+//Change the size for the title h2
+.sidebar_second .section .block-views-blockpost-relacionados-block-1 h2{
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+//Set margin to image of enlaces-relacionados and its title
+.content .view-enlaces-relacionados .view-content .field-content img{
+  margin-bottom: 10px;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, .4);
+}
+//align the content
+.sidebar_second .section .block-views-blockpost-relacionados-block-1{
+  text-align: center;
+}
+//Change the color for the text in the slidebar
+.views-field-title .field-content a{
+  color: #000;
+  text-decoration: none;
+  line-height: normal;
+}
+//Change the color for the text in the slidebar with hover
+.views-field-title .field-content a:hover{
+  color: #197264;
+}
+
+/*---------------------------Sidebar Related Links------------------------*/
+//Disable the border for the slidebar ralated links
+.sidebar_second .section .block-views-blockenlaces-relacionados-block-1{
+  border: none;
+  text-align: center;
+}
+//Space for the title h2
+.sidebar_second .section .block-views-blockenlaces-relacionados-block-1 h2{
+  margin: 25px 0 25px 0;
+}
+//align the content
+.view-enlaces-relacionados .view-content{
+  justify-content: center;
+}
+//Style for the title h2
+.block-views-blockenlaces-relacionados-block-1 h2{
+  display: inline-block;
+  position: relative;
+  border: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+}
+//Style for the title in the slide bar with two lines
+.block-views-blockenlaces-relacionados-block-1 h2::before, .block-views-blockenlaces-relacionados-block-1 h2::after{
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 2px;
+  background-color: currentColor;
+  top: 0.6em;
+}
+//align the line in the property before
+.block-views-blockenlaces-relacionados-block-1 h2::before{
+  left:-15%
+}
+//align the line in the property after
+.block-views-blockenlaces-relacionados-block-1 h2::after{
+  right: -15%
+}
+//Limit the width for the comments
+.view-enlaces-relacionados .view-content .views-row{
+  border-bottom: 2px solid #d6d6d6 !important;
+  padding: 0 0 15px 0;
+  margin: 0 0 20px 0;
+  width: 75%;
+}
+//Change the color for the hyperlinks in the comments
+.views-field-field-autor .field-content a{
+  color: #197264!important;
+}
+//shadow border for the cover page
+.node--type-post .node__content .field--type-image img{
+  box-shadow: 6px 7px 12px rgba(0, 0, 0, 0.4)
+}
+
+//Color for the hyperlinks
+.field--type-entity-reference .field__items .field__item a{
+  color: #197264;
+}
+//Style for the text comments forbidden
+.inline__links .links-inline .comment-forbidden a{
+  color: #fff!important;
+  text-decoration:none;
+  background-color: #6e6c6c;
+  padding: 5px 7px 5px 7px;
+  border-radius: 4px;
+}
+//Change the color for the buttons with the property hover
+.inline__links .links-inline .comment-forbidden a:hover{
+  color: #20c997!important;
+}
+//disable text about formats
+#edit-field-comment-bar-0-format .form-group{
+  display: none;
+}
+//disable comment bar
+.form-item-field-comment-bar-0-value .form-required {
+  display: none;
+}
+
+
+/*---------------------------Media Queries------------------------*/
+
+@media only screen  and (max-width:1000px){
+  .container .row-offcanvas-left .main-content .section .block-system-main-block .content .profile{
+    display: block;
+    text-align: center;
+  }
+  .container .row-offcanvas-left .main-content .section .block-system-main-block .content .profile .field--name-field-bio .field__item{
+    max-width: 100%;
+  }
+  .node--type-post .node__content .field--type-image img {
+    width: 270px;
+  }
+}
+
+@media only screen  and (max-width:767px){
+  /*---------------------------Navbar Titles Mobile------------------------*/
+  .navbar-nav .nav-item a{
+    display: inline-table;
+  }
+  /*---------------------------Main Content Mobile------------------------*/
+  //Make the col of content a little shorter for separating from sidebar
+  .container .col{
+    margin-right: 0px;
+  }
+}
+
+@media only screen  and (max-width:575px){
+  /*---------------------------Navbar Header Mobile------------------------*/
+  //Add a bottom to navbar-items
+  .header .navbar-expand-lg{
+    margin:0 20px;
+  }
+
+  //Design for nav home and contents
+  .nav{
+    margin-top: 20px;
+    display: grid;
+  }
+
+  //Margin between 3 lines an separator
+  .region-header-form .nav .nav-link--user-logout,
+  .region-header-form .nav .nav-link--user,
+  .region-header-form .nav .nav-link--user-login{
+    margin: 10px 0;
+  }
+
+  /*---------------------------Main Content Mobile------------------------*/
+  //Make the col of content back to normal and add 20px right an left
+  .container .col{
+    margin: 0 13px;
+  }
+  //Modify Images of content
+  .main-content .content .view-content .views-row .node__content img{
+    display: block;
+    margin: 40px auto;
+    width: 270px;
+    height: 400px;
+  }
+  //Change the margin of text from content in mobile
+  .main-content .content .view-content .views-row .node__content p {
+    margin: 0 20px;
+  }
+
+  /*---------------------------Content Mobile------------------------*/
+  //Design image for content
+  .node--type-post .node__content .field--type-image img {
+    display: block;
+    margin: 40px auto;
+    width: 270px;
+    height: 400px;
+  }
+  //Aling information of book to center
+  .field--type-entity-reference {
+    text-align: center;
+  }
+
+  /*---------------------------Content Comments Mobile------------------------*/
+  .comment .comment__content .card-body nav .inline__links .links-inline {
+    display: flex;
+  }
+
+  /*---------------------------Footer Mobile------------------------*/
+  .site-footer__bottom .block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+

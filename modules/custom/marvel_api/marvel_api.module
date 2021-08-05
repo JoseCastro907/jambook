@@ -1,0 +1,55 @@
+<?php
+
+use \Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help(). 
+ * 
+ */
+
+
+function marvel_api_help($route_name, RouteMatchInterface $route_match) {
+    switch($route_name) {
+        case 'help.page.marvel_api':
+            return t('
+                <h2>
+                    About
+                </h2>
+                <p>All calls to the Marvel Comics API must pass your public key via an “apikey” parameter.
+
+                Client-side and server-side applications have slightly different authentication rules in order to access the API. Please read below for the appropriate method for your application.
+
+                Please keep your private key private! Do not store your private key in publicly available code or repositories that are accessible to the public. Do not accidentally leave it at the bar.</p>
+                <h2>Authentication for Client-Side Applications</h2>
+                <p>
+                Requests from client-side (browser-based) applications must originate from a pre-authorized web site or browser extension URL.
+
+                You may add or edit your authorized domains in your API account panel. You may use the “*” wildcard to denote subdomains or paths. For example:</p>
+                <p>marvel.com - will authorize requests from Marvel.com but no subdomains of Marvel.com
+                developer.marvel.com - will authorize requests from developer.marvel.com
+                *.marvel.com - will authorize requests from any Marvel.com subdomain as well as Marvel.com
+                *.marvel.com/apigateway - will authorize requests from the apigateway path on any Marvel.com subdomain as well as Marvel.com</p>
+            
+                <h2>Authentication for Server-Side Applications</h2>
+                <p>Server-side applications must pass two parameters in addition to the apikey parameter:
+
+                ts - a timestamp (or other long string which can change on a request-by-request basis)
+                hash - a md5 digest of the ts parameter, your private key and your public key (e.g. md5(ts+privateKey+publicKey)
+                For example, a user with a public key of "1234" and a private key of "abcd" could construct a valid call as follows: http://gateway.marvel.com/v1/public/comics?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150 (the hash value is the md5 digest of 1abcd1234)</p>
+
+                <h2>Authorization Errors</h2>
+                <p>The following errors are returned by the Marvel Comics API when issues with authorization occur. These errors are returned by all endpoints.</p> 
+            ');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

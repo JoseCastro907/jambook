@@ -1,0 +1,5 @@
+name: Marvel API
+description: Marvel API module connection with Drupal 8
+type: module
+package: Marvel API
+core_version_requirement: ^8 || ^9 

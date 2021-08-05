@@ -1,0 +1,7 @@
+marvel_api.marvel_comic:
+  path: '/marvel/comics'
+  defaults:
+    _title: 'MARVEL COMICS'
+    _controller: '\Drupal\marvel_api\Controller\MarvelAPIController::jsPage'
+  requirements:
+    _permission: 'access content' 
